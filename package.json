@@ -1,0 +1,16 @@
+{
+  "name": "os-cn-interview-prep",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Operating System + Computer Networks interview prep in simple Hinglish, for 12-15 LPA placements",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "check": "node scripts/check-content.mjs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}

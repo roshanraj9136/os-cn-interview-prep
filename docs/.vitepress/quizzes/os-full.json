@@ -1,0 +1,277 @@
+[
+  {
+    "q": "An operating system primarily acts as a:",
+    "options": [
+      "Resource manager between user and hardware",
+      "Compiler for programs",
+      "Replacement for the CPU",
+      "Web browser"
+    ],
+    "answer": 0,
+    "explain": "OS user aur hardware ke beech baith kar CPU, memory, files aur devices manage karta hai, isliye wo resource manager hai."
+  },
+  {
+    "q": "Which of these runs with full privileges and directly manages hardware?",
+    "options": [
+      "Shell",
+      "Kernel",
+      "Compiler",
+      "Text editor"
+    ],
+    "answer": 1,
+    "explain": "Kernel OS ka core hai jo kernel mode mein full privileges ke saath hardware chalata hai; shell sirf commands pass karta hai."
+  },
+  {
+    "q": "A system call causes the CPU to switch from:",
+    "options": [
+      "Kernel mode to user mode",
+      "User mode to kernel mode",
+      "Sleep mode to run mode",
+      "64-bit to 32-bit mode"
+    ],
+    "answer": 1,
+    "explain": "System call ek trap ke zariye user mode se kernel mode mein jaati hai taaki OS controlled tareeke se kaam kare."
+  },
+  {
+    "q": "Which is NOT one of fork()'s return values?",
+    "options": [
+      "0 in the child",
+      "Child's PID in the parent",
+      "-1 on failure",
+      "Parent's PID in the child"
+    ],
+    "answer": 3,
+    "explain": "fork() child ko 0, parent ko child ka PID, aur fail hone par -1 deta hai; 'parent ka PID child ko' galat hai."
+  },
+  {
+    "q": "A program calls fork() three times in a row. How many total processes exist?",
+    "options": [
+      "3",
+      "6",
+      "8",
+      "16"
+    ],
+    "answer": 2,
+    "explain": "n consecutive forks se 2^n processes bante hain; 2^3 = 8 total (1 original + 7 children)."
+  },
+  {
+    "q": "A child process that has finished but whose parent has not called wait() is called a:",
+    "options": [
+      "Zombie process",
+      "Daemon process",
+      "Orphan process",
+      "Thread"
+    ],
+    "answer": 0,
+    "explain": "Zombie wo child hai jo khatam ho chuka par parent ne wait() nahi kiya, isliye uski entry process table mein reh jaati hai."
+  },
+  {
+    "q": "Threads of the same process share all of the following EXCEPT:",
+    "options": [
+      "Code section",
+      "Heap",
+      "Open files",
+      "Stack and registers"
+    ],
+    "answer": 3,
+    "explain": "Ek process ke threads code, data, heap aur open files share karte hain, par har thread ka apna stack, registers aur PC hota hai."
+  },
+  {
+    "q": "Saving the state of one process and loading another's state is called:",
+    "options": [
+      "Context switch",
+      "Paging",
+      "Thrashing",
+      "Spooling"
+    ],
+    "answer": 0,
+    "explain": "Context switch mein chal rahe process ki state PCB mein save karke doosre ki load karte hain; ye pure overhead hai."
+  },
+  {
+    "q": "For processes P1 (BT 24), P2 (BT 3), P3 (BT 3) all arriving at time 0, FCFS gives an average waiting time of:",
+    "options": [
+      "3",
+      "9",
+      "17",
+      "27"
+    ],
+    "answer": 2,
+    "explain": "FCFS order P1,P2,P3: WT = 0, 24, 27; average = 51/3 = 17 (convoy effect)."
+  },
+  {
+    "q": "Which non-preemptive algorithm gives the minimum average waiting time when all jobs arrive together?",
+    "options": [
+      "FCFS",
+      "Round Robin",
+      "Priority",
+      "Shortest Job First (SJF)"
+    ],
+    "answer": 3,
+    "explain": "SJF chhote jobs pehle chalata hai, isliye non-preemptive algorithms mein sabse kam average waiting time deta hai."
+  },
+  {
+    "q": "If the Round Robin time quantum is made very large, Round Robin behaves like:",
+    "options": [
+      "SJF",
+      "FCFS",
+      "SRTF",
+      "Priority scheduling"
+    ],
+    "answer": 1,
+    "explain": "Quantum bahut bada ho to har process ek hi turn mein poora burst khatam kar leta hai, jo FCFS jaisa ban jaata hai."
+  },
+  {
+    "q": "Aging is used to solve which problem in priority scheduling?",
+    "options": [
+      "Deadlock",
+      "Fragmentation",
+      "Thrashing",
+      "Starvation"
+    ],
+    "answer": 3,
+    "explain": "Aging lambe wait karne wale process ki priority badha deta hai, jisse starvation khatam ho jaata hai."
+  },
+  {
+    "q": "The key difference between a mutex and a semaphore is that a mutex:",
+    "options": [
+      "Is always an integer counter",
+      "Cannot block a thread",
+      "Can never be used for mutual exclusion",
+      "Has ownership (only the locker can unlock)"
+    ],
+    "answer": 3,
+    "explain": "Mutex mein ownership hoti hai (jo lock kare wahi unlock kare); semaphore ek bina ownership wala counter hai."
+  },
+  {
+    "q": "In the bounded-buffer producer-consumer solution, the correct semaphore values are:",
+    "options": [
+      "empty = 0, full = N, mutex = 1",
+      "empty = N, full = 0, mutex = 1",
+      "empty = N, full = N, mutex = 0",
+      "empty = 1, full = 1, mutex = N"
+    ],
+    "answer": 1,
+    "explain": "Shuru mein saare N slots khaali hote hain, isliye empty = N, full = 0, aur mutex = 1 (lock)."
+  },
+  {
+    "q": "A race condition occurs when:",
+    "options": [
+      "A process waits forever",
+      "Memory is full",
+      "The CPU has no process to run",
+      "Two threads share data and the result depends on their execution order"
+    ],
+    "answer": 3,
+    "explain": "Race condition tab hoti hai jab do threads ek saath shared data badalte hain aur result unke order par depend kar jaata hai."
+  },
+  {
+    "q": "The dining philosophers problem deadlocks when:",
+    "options": [
+      "Every philosopher picks up the left chopstick first",
+      "At most four sit at the table",
+      "Odd philosophers pick right first",
+      "Each picks up both chopsticks together"
+    ],
+    "answer": 0,
+    "explain": "Agar sab ek saath left chopstick utha lein to sab right ke liye ruk jaate hain aur circular wait se deadlock ban jaata hai."
+  },
+  {
+    "q": "Which is NOT one of the four necessary conditions for deadlock?",
+    "options": [
+      "Mutual exclusion",
+      "Hold and wait",
+      "Aging",
+      "Circular wait"
+    ],
+    "answer": 2,
+    "explain": "Chaar Coffman conditions hain: mutual exclusion, hold and wait, no preemption, circular wait. Aging unme nahi hai."
+  },
+  {
+    "q": "Given Allocation and Max with Available = (3 3 2), a valid safe sequence for the standard Banker's example is:",
+    "options": [
+      "<P0, P1, P2, P3, P4>",
+      "<P1, P3, P4, P0, P2>",
+      "<P2, P0, P1, P3, P4>",
+      "<P4, P3, P2, P1, P0>"
+    ],
+    "answer": 1,
+    "explain": "P0 shuru hi nahi ho sakta (Need > Available). Safe sequence <P1, P3, P4, P0, P2> safety check paas karta hai."
+  },
+  {
+    "q": "The Banker's algorithm is a technique for deadlock:",
+    "options": [
+      "Detection",
+      "Prevention",
+      "Avoidance",
+      "Recovery"
+    ],
+    "answer": 2,
+    "explain": "Banker's algorithm deadlock avoidance hai; request tabhi deta hai jab system safe state mein rahe, aur maximum need pehle se chahiye."
+  },
+  {
+    "q": "With 4 KB pages, logical address 13000 maps to page 3 in frame 5. The physical address is:",
+    "options": [
+      "21192",
+      "13000",
+      "20480",
+      "17096"
+    ],
+    "answer": 0,
+    "explain": "Offset = 13000 - 3*4096 = 712; physical = 5*4096 + 712 = 21192."
+  },
+  {
+    "q": "Which type of fragmentation can paging cause?",
+    "options": [
+      "External only",
+      "Internal (in the last page)",
+      "Both internal and external",
+      "Neither"
+    ],
+    "answer": 1,
+    "explain": "Paging mein external fragmentation nahi hoti; sirf aakhri page mein thodi internal fragmentation ho sakti hai."
+  },
+  {
+    "q": "A TLB is best described as:",
+    "options": [
+      "A disk buffer",
+      "A scheduling queue",
+      "A type of page replacement",
+      "A fast cache of page-table entries in the MMU"
+    ],
+    "answer": 3,
+    "explain": "TLB MMU ke andar ek chhota fast cache hai jo recent page-table entries rakh kar address translation tez karta hai."
+  },
+  {
+    "q": "For reference string 7 0 1 2 0 3 0 4 2 3 0 3 2 with 3 frames, the Optimal algorithm gives how many page faults?",
+    "options": [
+      "7",
+      "9",
+      "10",
+      "13"
+    ],
+    "answer": 0,
+    "explain": "Optimal (3 frames) us string par 7 page faults deta hai (FIFO = 10, LRU = 9)."
+  },
+  {
+    "q": "Belady's anomaly (more frames giving more faults) can occur with which algorithm?",
+    "options": [
+      "LRU",
+      "Optimal",
+      "FIFO",
+      "None, it is impossible"
+    ],
+    "answer": 2,
+    "explain": "Belady's anomaly FIFO ke saath hoti hai; LRU aur Optimal stack algorithms hain, inme ye nahi hoti."
+  },
+  {
+    "q": "An inode stores a file's metadata but NOT its:",
+    "options": [
+      "Permissions",
+      "Size",
+      "File name",
+      "Pointers to data blocks"
+    ],
+    "answer": 2,
+    "explain": "Inode permissions, size, owner aur data block pointers rakhta hai, par file ka naam directory entry mein hota hai."
+  }
+]

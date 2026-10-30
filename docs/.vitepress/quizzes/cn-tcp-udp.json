@@ -1,0 +1,32 @@
+[
+  {
+    "q": "TCP ka 3-way handshake kaun se order mein hota hai?",
+    "options": ["ACK, SYN, SYN-ACK", "SYN, ACK, FIN", "SYN, SYN-ACK, ACK", "SYN, FIN, ACK"],
+    "answer": 2,
+    "explain": "Client SYN bhejta hai, server SYN-ACK deta hai, phir client ACK bhejta hai, isi se connection ready hota hai."
+  },
+  {
+    "q": "In mein se kaun sa protocol aam taur par UDP par chalta hai?",
+    "options": ["HTTP file download", "Email (SMTP)", "DNS query", "FTP file transfer"],
+    "answer": 2,
+    "explain": "DNS normal queries ke liye UDP port 53 use karta hai, kyunki query chhoti hoti hai aur speed zaroori hai."
+  },
+  {
+    "q": "Flow control aur congestion control mein kya farak hai?",
+    "options": ["Dono ek hi cheez hain", "Flow control receiver ko bachata hai (rwnd), congestion control network ko (cwnd)", "Flow control network ko bachata hai, congestion control receiver ko", "Dono sirf UDP mein hote hain"],
+    "answer": 1,
+    "explain": "Flow control slow receiver ko overflow se bachata hai (rwnd); congestion control network overload se bachata hai (cwnd)."
+  },
+  {
+    "q": "UDP header ka size kitna hota hai?",
+    "options": ["20 bytes", "40 bytes", "8 bytes", "60 bytes"],
+    "answer": 2,
+    "explain": "UDP header sirf 8 bytes ka hai: source port, destination port, length, checksum. Isi liye UDP light aur fast hai."
+  },
+  {
+    "q": "TCP slow start mein ssthresh = 16 hai aur cwnd = 20 par timeout hota hai. Timeout ke turant baad ssthresh aur cwnd kya honge?",
+    "options": ["ssthresh = 16, cwnd = 16", "ssthresh = 10, cwnd = 1", "ssthresh = 20, cwnd = 1", "ssthresh = 8, cwnd = 8"],
+    "answer": 1,
+    "explain": "Timeout par ssthresh = cwnd/2 = 20/2 = 10 ho jaata hai aur cwnd = 1 MSS par reset hota hai, phir slow start shuru."
+  }
+]

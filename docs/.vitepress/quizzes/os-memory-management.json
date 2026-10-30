@@ -1,0 +1,32 @@
+[
+  {
+    "q": "Page size 4 KB (4096 bytes) hai. Logical address 13000, aur page 3 frame 5 mein hai. Physical address kya hoga?",
+    "options": ["20480", "21192", "13000", "12288"],
+    "answer": 1,
+    "explain": "Page number = 13000/4096 = 3, offset = 13000 - 12288 = 712. Physical = 5*4096 + 712 = 21192."
+  },
+  {
+    "q": "Paging ke baare mein kaunsa sahi hai?",
+    "options": ["External fragmentation hoti hai", "Internal fragmentation last page mein ho sakti hai", "Dono external aur internal zyada hoti hain", "Koi fragmentation nahi hoti"],
+    "answer": 1,
+    "explain": "Saare frames same size ke hone se external fragmentation nahi hoti; sirf last page mein thodi internal waste ho sakti hai."
+  },
+  {
+    "q": "Free holes 100, 500, 200, 300, 600 KB hain. First fit se 417 KB process kis hole mein jaayega (212 KB pehle hi 500 ko 288 bana chuka hai)?",
+    "options": ["300 KB", "500 KB", "600 KB", "200 KB"],
+    "answer": 2,
+    "explain": "First fit upar se pehla fit hole leta hai; 288/200/300 chhote hain, isliye 417 KB 600 KB hole mein jaata hai."
+  },
+  {
+    "q": "32-bit logical address aur 4 KB page size par ek single-level page table mein kitni entries hongi?",
+    "options": ["2^12", "2^20", "2^32", "4096"],
+    "answer": 1,
+    "explain": "Offset 12 bits, page number 20 bits -> 2^20 = 1,048,576 entries. 4-byte entry par table 4 MB ki banti hai."
+  },
+  {
+    "q": "TLB lookup 20 ns, memory access 100 ns, hit ratio 80%. EAT kya hoga?",
+    "options": ["120 ns", "140 ns", "122 ns", "220 ns"],
+    "answer": 1,
+    "explain": "EAT = 0.8*(20+100) + 0.2*(20+100+100) = 96 + 44 = 140 ns."
+  }
+]

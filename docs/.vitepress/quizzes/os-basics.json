@@ -1,0 +1,57 @@
+[
+  {
+    "q": "A system call is used to:",
+    "options": [
+      "Switch the CPU from user mode to kernel mode to request a service from the OS",
+      "Call a function defined in your own C file",
+      "Permanently stay in kernel mode for speed",
+      "Avoid using the kernel entirely"
+    ],
+    "answer": 0,
+    "explain": "System call user mode se kernel mode mein trap ke through jaata hai taaki OS se koi service (file, process) maang sake."
+  },
+  {
+    "q": "Which kernel type keeps most services like drivers and file system inside the kernel for speed?",
+    "options": [
+      "Microkernel",
+      "Monolithic kernel",
+      "Exokernel",
+      "No kernel"
+    ],
+    "answer": 1,
+    "explain": "Monolithic kernel (jaise Linux) mein zyada services kernel ke andar hoti hain, isliye fast par ek bug poore kernel ko gira sakta hai."
+  },
+  {
+    "q": "The mode bit value for kernel mode and user mode respectively is usually:",
+    "options": [
+      "1 and 0",
+      "0 and 1",
+      "0 and 0",
+      "1 and 1"
+    ],
+    "answer": 1,
+    "explain": "Convention: 0 = kernel mode (full power), 1 = user mode (limited power)."
+  },
+  {
+    "q": "Difference between multitasking and multiprocessing:",
+    "options": [
+      "Both always need multiple CPUs",
+      "Multitasking needs multiple CPUs, multiprocessing uses one CPU",
+      "Multitasking is fast switching on one CPU, multiprocessing truly runs on multiple CPUs",
+      "They mean exactly the same thing"
+    ],
+    "answer": 2,
+    "explain": "Multitasking ek CPU par time-slice switching hai; multiprocessing mein sach mein kai CPU/cores saath chalte hain."
+  },
+  {
+    "q": "During booting, which process is started first by the kernel as PID 1?",
+    "options": [
+      "BIOS",
+      "The bootloader (GRUB)",
+      "init or systemd",
+      "The POST routine"
+    ],
+    "answer": 2,
+    "explain": "Kernel sab initialise karke pehla user process init/systemd (PID 1) start karta hai, jisse baaki processes bante hain."
+  }
+]

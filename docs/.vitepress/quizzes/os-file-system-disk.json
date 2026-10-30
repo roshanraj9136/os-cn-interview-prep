@@ -1,0 +1,32 @@
+[
+  {
+    "q": "Request queue 98,183,37,122,14,124,65,67 hai aur head 53 par hai. SSTF se total head movement kitna?",
+    "options": ["640", "236", "331", "382"],
+    "answer": 1,
+    "explain": "SSTF order 53->65->67->37->14->98->122->124->183 deta hai, total movement 236 cylinders."
+  },
+  {
+    "q": "inode ke baare mein kaunsa sahi hai?",
+    "options": ["inode file ka naam store karta hai", "inode file ki metadata store karta hai par naam nahi", "inode sirf naam store karta hai", "inode data blocks store nahi karta pointers bhi nahi"],
+    "answer": 1,
+    "explain": "inode permissions, owner, size, timestamps aur data-block pointers rakhta hai; naam directory entry mein hota hai."
+  },
+  {
+    "q": "Target file delete ho jaye to kaunsa link toot (dangling) ho jaata hai?",
+    "options": ["Hard link", "Soft (symbolic) link", "Dono", "Koi nahi"],
+    "answer": 1,
+    "explain": "Soft link sirf path rakhta hai, isliye target delete hone par toot jaata hai; hard link same inode share karta hai to data bana rehta hai."
+  },
+  {
+    "q": "Kaunsa RAID striping + distributed parity use karta hai aur 1 disk fail sambhal leta hai (min 3 disks)?",
+    "options": ["RAID 0", "RAID 1", "RAID 5", "RAID 10"],
+    "answer": 2,
+    "explain": "RAID 5 = striping + distributed parity, ek disk failure survive karta hai, kam se kam 3 disks chahiye."
+  },
+  {
+    "q": "Disk access time mein sabse bada hissa aam taur par kaunsa hota hai aur scheduling kise kam karti hai?",
+    "options": ["Transfer time", "Rotational latency", "Seek time", "Processing time"],
+    "answer": 2,
+    "explain": "Seek time (head ko sahi track tak le jaana) aksar sabse bada hota hai, isi liye disk scheduling seek movement kam karti hai."
+  }
+]

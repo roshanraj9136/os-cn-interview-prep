@@ -1,0 +1,32 @@
+[
+  {
+    "q": "MAC address kitne bits ka hota hai?",
+    "options": ["32 bits", "48 bits", "128 bits", "16 bits"],
+    "answer": 1,
+    "explain": "MAC address 48 bits = 6 bytes ka hota hai; pehle 24 bits OUI (manufacturer) hote hain."
+  },
+  {
+    "q": "ARP request aur reply kaise bheje jaate hain?",
+    "options": ["Dono broadcast", "Request unicast, reply broadcast", "Dono unicast", "Request broadcast, reply unicast"],
+    "answer": 3,
+    "explain": "ARP request broadcast hota hai (sab ko), par sirf sahi host unicast reply bhejta hai."
+  },
+  {
+    "q": "Data 100100, generator 1101. Transmitted CRC (remainder) kya hoga?",
+    "options": ["001", "101", "110", "000"],
+    "answer": 0,
+    "explain": "3 zeros jod ke mod-2 division karne par remainder 001 aata hai; codeword 100100001 banta hai."
+  },
+  {
+    "q": "m = 3 sequence bits par Go-Back-N ka maximum sender window kya hai?",
+    "options": ["4", "8", "7", "3"],
+    "answer": 2,
+    "explain": "Go-Back-N window = 2^m - 1 = 2^3 - 1 = 7. (Selective Repeat window 2^(m-1) = 4 hota hai.)"
+  },
+  {
+    "q": "Collision domains ko kaun sa device todta hai (har port alag banata hai)?",
+    "options": ["Hub", "Repeater", "Switch", "Modem"],
+    "answer": 2,
+    "explain": "Switch har port ko alag collision domain banata hai. Router broadcast domains todta hai."
+  }
+]

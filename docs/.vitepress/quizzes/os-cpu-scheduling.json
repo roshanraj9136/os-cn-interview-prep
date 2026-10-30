@@ -1,0 +1,32 @@
+[
+  {
+    "q": "Turnaround time (TAT) ka formula kya hai?",
+    "options": ["TAT = CT - AT", "TAT = BT - AT", "TAT = CT - BT", "TAT = WT - BT"],
+    "answer": 0,
+    "explain": "Turnaround time = Completion Time minus Arrival Time, yaani process ke aane se khatam hone tak ka total time."
+  },
+  {
+    "q": "Kaunsa scheduling algorithm non-preemptive algorithms mein minimum average waiting time deta hai (jab saare jobs ek saath aayein)?",
+    "options": ["FCFS", "Round Robin", "SJF (Shortest Job First)", "Priority (preemptive)"],
+    "answer": 2,
+    "explain": "SJF chhote jobs pehle chalaata hai, isliye average waiting time sabse kam aata hai. Dikkat: starvation aur burst-time estimate."
+  },
+  {
+    "q": "FCFS mein jab ek lamba process ke peeche chhote processes atak jaate hain, use kya kehte hain?",
+    "options": ["Starvation", "Convoy effect", "Aging", "Thrashing"],
+    "answer": 1,
+    "explain": "Convoy effect: FCFS mein bade BT wale process ke peeche chhote processes wait karte hain, average WT badh jaata hai."
+  },
+  {
+    "q": "Example A (P1 BT 24, P2 BT 3, P3 BT 3, sab AT 0) mein FCFS ka average waiting time kya hai?",
+    "options": ["3.00", "5.67", "17.00", "27.00"],
+    "answer": 2,
+    "explain": "WT: P1=0, P2=24, P3=27. Sum=51, 51/3=17.00. Isi ko SJF 3.00 tak le aata hai."
+  },
+  {
+    "q": "Round Robin mein time quantum bahut bada rakh diya jaye to algorithm kaise behave karega?",
+    "options": ["SJF jaisa", "FCFS jaisa", "Priority jaisa", "SRTF jaisa"],
+    "answer": 1,
+    "explain": "Bada quantum matlab har process ek hi slice mein pura chal jaata hai, to RR FCFS ki tarah behave karne lagta hai."
+  }
+]

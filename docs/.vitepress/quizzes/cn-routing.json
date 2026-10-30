@@ -1,0 +1,32 @@
+[
+  {
+    "q": "Jaise packet ek router se doosre tak jaata hai, kya change hota hai?",
+    "options": ["Source aur destination IP address", "Source aur destination MAC address", "Kuch bhi nahi badalta", "Sirf destination IP address"],
+    "answer": 1,
+    "explain": "MAC address sirf ek hop ke liye hota hai, isliye har router par source/destination MAC badalta hai; IP end-to-end same rehta hai."
+  },
+  {
+    "q": "Router multiple matching routes mein se kaun sa choose karta hai?",
+    "options": ["Sabse kam metric wala", "Longest prefix match (sabse specific)", "Sabse pehle add hua", "Default route hamesha"],
+    "answer": 1,
+    "explain": "Router longest prefix match use karta hai, yaani sabse lamba (most specific) matching prefix chuno."
+  },
+  {
+    "q": "Kaun sa protocol link state hai aur Dijkstra algorithm use karta hai?",
+    "options": ["RIP", "BGP", "OSPF", "ARP"],
+    "answer": 2,
+    "explain": "OSPF link state protocol hai, poora network map banata hai aur Dijkstra se shortest path nikalta hai."
+  },
+  {
+    "q": "Dijkstra example mein links A-B=4, A-C=2, B-C=1 hain. Source A se B tak ka shortest cost kya hai?",
+    "options": ["4", "3", "2", "5"],
+    "answer": 1,
+    "explain": "A -> C -> B ka cost 2 + 1 = 3 hai, jo direct A-B link (4) se sasta hai, to shortest cost 3."
+  },
+  {
+    "q": "traceroute routers ka pata kaise lagata hai?",
+    "options": ["Broadcast bhej kar", "Badhte TTL bhej kar aur ICMP Time Exceeded sun kar", "ARP request se", "DNS query se"],
+    "answer": 1,
+    "explain": "traceroute TTL 1, 2, 3... bhejta hai; har router jo packet drop karta hai wo ICMP Time Exceeded bhejta hai, jisse hop ka pata chalta hai."
+  }
+]

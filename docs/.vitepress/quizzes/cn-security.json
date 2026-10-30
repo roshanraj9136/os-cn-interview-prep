@@ -1,0 +1,32 @@
+[
+  {
+    "q": "Symmetric encryption ke baare mein kaun sa sahi hai?",
+    "options": ["Public aur private key ka pair use hota hai", "Encrypt aur decrypt ke liye ek hi shared key, aur ye fast hoti hai", "Ye hamesha asymmetric se slow hoti hai", "Isme key share karne ki zaroorat nahi"],
+    "answer": 1,
+    "explain": "Symmetric encryption (AES) ek hi key dono taraf use karti hai aur fast hai; iski samasya key safely share karna hai."
+  },
+  {
+    "q": "Password store karne ke liye sabse sahi tareeka kya hai?",
+    "options": ["Plain text mein", "Base64 encoding karke", "Salt ke saath hashing (bcrypt/argon2)", "Symmetric encryption se"],
+    "answer": 2,
+    "explain": "Passwords ko salt ke saath hash karna chahiye (bcrypt/argon2). Hashing one-way hai, isliye leak hone par bhi original password nahi milta."
+  },
+  {
+    "q": "SQL injection se bachne ka sabse accha tareeka kya hai?",
+    "options": ["Parameterized queries (prepared statements) use karna", "HTTP ki jagah HTTPS use karna", "Base64 encoding", "Firewall band kar dena"],
+    "answer": 0,
+    "explain": "User input ko seedha query mein jodne se SQL injection hota hai. Parameterized queries input ko data ki tarah treat karti hain, code ki tarah nahi."
+  },
+  {
+    "q": "IDS aur IPS mein mukhya farak kya hai?",
+    "options": ["IDS block karta hai, IPS sirf alert deta hai", "Dono bilkul same hain", "IDS sirf detect kar ke alert deta hai, IPS detect kar ke block bhi karta hai", "IDS encryption karta hai, IPS decryption"],
+    "answer": 2,
+    "explain": "IDS attack detect kar ke alert deta hai (monitor), jabki IPS inline hota hai aur attack ko block bhi kar deta hai."
+  },
+  {
+    "q": "TLS 1.3 handshake ke baare mein kaun sa sahi hai?",
+    "options": ["Saara data asymmetric key (RSA) se encrypt hota hai", "ECDHE se ek symmetric session key banti hai aur data usi se encrypt hota hai", "Koi certificate zaroori nahi", "Handshake mein kam se kam 5 round trip lagte hain"],
+    "answer": 1,
+    "explain": "TLS asymmetric crypto se ek symmetric session key set karta hai (ECDHE), phir fast symmetric encryption (AES) se data bhejta hai. TLS 1.3 ek round trip mein ho jaata hai."
+  }
+]

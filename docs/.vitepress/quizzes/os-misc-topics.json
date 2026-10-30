@@ -1,0 +1,32 @@
+[
+  {
+    "q": "Loop ka counter variable baar-baar use hona kaunsi locality ka example hai?",
+    "options": ["Spatial locality", "Temporal locality", "No locality", "Cache miss"],
+    "answer": 1,
+    "explain": "Temporal locality: jo data abhi use hua wo thodi der mein phir use hone wala hai, jaise loop counter."
+  },
+  {
+    "q": "Virtual machine aur container (Docker) mein main farq kya hai?",
+    "options": ["VM halki hoti hai container se", "Container apna poora OS chalata hai", "VM pura guest OS chalati hai, container host kernel share karta hai", "Dono bilkul same hain"],
+    "answer": 2,
+    "explain": "VM mein har instance ka apna poora guest OS hota hai (bhari); container host OS ka kernel share karta hai (halka, tez)."
+  },
+  {
+    "q": "Permission string -rwxr-xr-- ka octal value kya hai?",
+    "options": ["777", "755", "754", "644"],
+    "answer": 2,
+    "explain": "owner rwx=7, group r-x=5, others r--=4 -> 754."
+  },
+  {
+    "q": "Bade data transfer ko CPU ki madad ke bina seedhe memory se/tak move karne ke liye kya use hota hai?",
+    "options": ["Polling", "Interrupt", "DMA", "Spooling"],
+    "answer": 2,
+    "explain": "DMA (Direct Memory Access) controller khud data move karta hai; CPU sirf shuru aur ant mein involve hota hai."
+  },
+  {
+    "q": "32-bit address space maximum kitni memory address kar sakta hai?",
+    "options": ["2 GB", "4 GB", "8 GB", "16 GB"],
+    "answer": 1,
+    "explain": "2^32 bytes = 4 GB; 4 GB se zyada RAM use karne ke liye 64-bit OS chahiye."
+  }
+]

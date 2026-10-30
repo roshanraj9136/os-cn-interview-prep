@@ -1,0 +1,32 @@
+[
+  {
+    "q": "OSI model mein sabse upar wali layer kaun si hai?",
+    "options": ["Application", "Transport", "Network", "Physical"],
+    "answer": 0,
+    "explain": "OSI mein upar se neeche: Application, Presentation, Session, Transport, Network, Data Link, Physical."
+  },
+  {
+    "q": "Network layer (L3) par data ko kya kehte hain (PDU)?",
+    "options": ["Frame", "Segment", "Packet", "Bits"],
+    "answer": 2,
+    "explain": "L3 par PDU packet hai. Transport par segment, Data Link par frame, Physical par bits."
+  },
+  {
+    "q": "TCP aur UDP OSI model ki kaun si layer par kaam karte hain?",
+    "options": ["Network", "Data Link", "Application", "Transport"],
+    "answer": 3,
+    "explain": "TCP aur UDP Transport layer (L4) par kaam karte hain, ports ke through process-to-process delivery."
+  },
+  {
+    "q": "ARP OSI model mein kahan fit hota hai?",
+    "options": ["Layer 2 aur Layer 3 ke beech", "Sirf Application layer", "Transport layer", "Physical layer"],
+    "answer": 0,
+    "explain": "ARP L3 ka IP le kar L2 ka MAC nikaalta hai, isliye wo L2 aur L3 ke beech kaam karta hai."
+  },
+  {
+    "q": "TCP/IP 4-layer model OSI ki kaun si teen layers ko ek Application layer mein milata hai?",
+    "options": ["Transport, Network, Data Link", "Network, Data Link, Physical", "Application, Presentation, Session", "Session, Transport, Network"],
+    "answer": 2,
+    "explain": "TCP/IP 4-layer model OSI ki Application, Presentation aur Session ko ek Application layer mein mila deta hai."
+  }
+]

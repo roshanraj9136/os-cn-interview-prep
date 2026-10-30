@@ -1,0 +1,32 @@
+[
+  {
+    "q": "Deadlock hone ke liye kitni conditions ek saath honi chahiye?",
+    "options": ["2", "3", "4", "5"],
+    "answer": 2,
+    "explain": "Chaar Coffman conditions ek saath chahiye: mutual exclusion, hold and wait, no preemption, circular wait."
+  },
+  {
+    "q": "Banker's algorithm kis category mein aata hai?",
+    "options": ["Deadlock avoidance", "Deadlock prevention", "Deadlock detection", "Deadlock recovery"],
+    "answer": 0,
+    "explain": "Banker's algorithm deadlock avoidance hai: har allocation se pehle check karta hai ki system safe state mein rahega ya nahi."
+  },
+  {
+    "q": "Single-instance resources wale Resource Allocation Graph mein cycle ka matlab kya hai?",
+    "options": ["Deadlock ho sakta hai, par zaroori nahi", "Pakka deadlock hai", "Starvation hai", "Koi deadlock nahi"],
+    "answer": 1,
+    "explain": "Jab har resource type ka ek hi instance ho, graph mein cycle ka matlab pakka deadlock. Multiple instances par cycle se deadlock possible hai par zaroori nahi."
+  },
+  {
+    "q": "Diye gaye example mein Available = (3 3 2). Kaunsa process safe sequence mein sabse pehle chal sakta hai?",
+    "options": ["P0 (Need 7 4 3)", "P2 (Need 6 0 0)", "P1 (Need 1 2 2)", "P4 (Need 4 3 1)"],
+    "answer": 2,
+    "explain": "Sirf P1 ka Need (1 2 2) Available (3 3 2) se chhota ya barabar hai, isliye safe sequence P1 se shuru hota hai."
+  },
+  {
+    "q": "Circular wait condition ko todne ka sabse practical tarika kya hai?",
+    "options": ["Resources ko shareable banana", "Saare resources shuru mein hi de dena", "Resources ko number dekar sirf badhte order mein request karna", "Resources chheen lena"],
+    "answer": 2,
+    "explain": "Har resource ko ek number dekar sabhi processes ko badhte number ke order mein hi request karne dena circular wait ko tod deta hai."
+  }
+]

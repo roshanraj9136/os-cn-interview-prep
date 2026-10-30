@@ -1,0 +1,277 @@
+[
+  {
+    "q": "The internet is the biggest example of which type of network?",
+    "options": [
+      "WAN",
+      "LAN",
+      "PAN",
+      "MAN"
+    ],
+    "answer": 0,
+    "explain": "WAN bahut bade area ko cover karta hai; internet sabse bada WAN hai. LAN sirf ek building jitna hota hai."
+  },
+  {
+    "q": "A full mesh topology with 6 nodes needs how many links?",
+    "options": [
+      "12",
+      "30",
+      "15",
+      "6"
+    ],
+    "answer": 2,
+    "explain": "Full mesh links = n(n-1)/2 = 6x5/2 = 15. Har node baaki sabse directly juda hota hai."
+  },
+  {
+    "q": "A phone call where both people can talk at the same time is an example of:",
+    "options": [
+      "Full-duplex",
+      "Half-duplex",
+      "Simplex",
+      "Broadcast"
+    ],
+    "answer": 0,
+    "explain": "Full-duplex matlab dono taraf ek saath baat ho sakti hai. Walkie-talkie half-duplex hota hai."
+  },
+  {
+    "q": "The correct top-to-bottom order of OSI layers is:",
+    "options": [
+      "Application, Presentation, Session, Transport, Network, Data Link, Physical",
+      "Application, Session, Presentation, Network, Transport, Data Link, Physical",
+      "Physical, Data Link, Network, Transport, Session, Presentation, Application",
+      "Application, Transport, Network, Session, Presentation, Data Link, Physical"
+    ],
+    "answer": 0,
+    "explain": "Upar se neeche: Application, Presentation, Session, Transport, Network, Data Link, Physical. Yaad rakho 'All People Seem To Need Data Processing'."
+  },
+  {
+    "q": "The PDU (data unit) at the Network layer is called a:",
+    "options": [
+      "Frame",
+      "Segment",
+      "Bit",
+      "Packet"
+    ],
+    "answer": 3,
+    "explain": "Network layer par packet, Transport par segment/datagram, Data Link par frame, Physical par bits."
+  },
+  {
+    "q": "A router operates at which OSI layer?",
+    "options": [
+      "Layer 2 (Data Link)",
+      "Layer 3 (Network)",
+      "Layer 1 (Physical)",
+      "Layer 4 (Transport)"
+    ],
+    "answer": 1,
+    "explain": "Router L3 par IP address se kaam karta hai. Switch L2 (MAC), hub L1."
+  },
+  {
+    "q": "ARP is used to:",
+    "options": [
+      "Find the MAC address for a known IP on the local network",
+      "Find the IP address for a known domain name",
+      "Assign IP addresses automatically",
+      "Encrypt data between two hosts"
+    ],
+    "answer": 0,
+    "explain": "ARP IP se MAC nikalta hai (request broadcast, reply unicast). Naam se IP DNS karta hai."
+  },
+  {
+    "q": "How many bits is a MAC address?",
+    "options": [
+      "32 bits",
+      "128 bits",
+      "48 bits",
+      "16 bits"
+    ],
+    "answer": 2,
+    "explain": "MAC address 48-bit hota hai (pehle 24 bits OUI = company). IPv4 32-bit, IPv6 128-bit."
+  },
+  {
+    "q": "A switch that receives a frame for an unknown destination MAC will:",
+    "options": [
+      "Drop the frame",
+      "Return it to the sender",
+      "Send it only to the router",
+      "Flood it out of all ports except the one it came in on"
+    ],
+    "answer": 3,
+    "explain": "Destination MAC na pata ho to switch frame ko baaki sab ports par flood karta hai (unknown unicast)."
+  },
+  {
+    "q": "For the address 192.168.10.75/27, the network and broadcast addresses are:",
+    "options": [
+      "Network 192.168.10.0, broadcast 192.168.10.127",
+      "Network 192.168.10.64, broadcast 192.168.10.95",
+      "Network 192.168.10.72, broadcast 192.168.10.79",
+      "Network 192.168.10.64, broadcast 192.168.10.127"
+    ],
+    "answer": 1,
+    "explain": "/27 mask 255.255.255.224, block size 32. 75 aata hai 64-95 block mein: network .64, broadcast .95."
+  },
+  {
+    "q": "How many usable hosts does a /27 subnet provide?",
+    "options": [
+      "32",
+      "62",
+      "30",
+      "14"
+    ],
+    "answer": 2,
+    "explain": "/27 mein 5 host bits: 2^5 = 32 addresses, minus network aur broadcast = 30 usable hosts."
+  },
+  {
+    "q": "You need at least 50 hosts in a subnet. The smallest prefix that works is:",
+    "options": [
+      "/27",
+      "/26",
+      "/25",
+      "/28"
+    ],
+    "answer": 1,
+    "explain": "6 host bits se 2^6 - 2 = 62 >= 50, to /26. /27 sirf 30 deta hai, kam pad jaate hai."
+  },
+  {
+    "q": "Which of these is a private IPv4 range (RFC 1918)?",
+    "options": [
+      "8.8.8.0/24",
+      "172.32.0.0/16",
+      "192.168.0.0/16",
+      "169.254.0.0/16"
+    ],
+    "answer": 2,
+    "explain": "Private ranges: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16. 169.254.x link-local/APIPA hai, 172.32.x public hai."
+  },
+  {
+    "q": "NAT/PAT is mainly used to:",
+    "options": [
+      "Encrypt traffic leaving the network",
+      "Assign MAC addresses to devices",
+      "Speed up DNS resolution",
+      "Let many private devices share one public IP address"
+    ],
+    "answer": 3,
+    "explain": "PAT (NAPT) se kai private devices ek public IP share kar lete hai, alag port numbers se. Isse IPv4 bachte hai."
+  },
+  {
+    "q": "When a packet crosses a router, which of these stays the same end to end (without NAT)?",
+    "options": [
+      "Source and destination MAC addresses",
+      "The TTL value",
+      "The frame check sequence",
+      "Source and destination IP addresses"
+    ],
+    "answer": 3,
+    "explain": "Har hop par MAC badalta hai aur TTL ek kam hota hai, par source/destination IP end-to-end same rehti hai."
+  },
+  {
+    "q": "Which routing protocol runs between autonomous systems and powers the internet?",
+    "options": [
+      "BGP",
+      "RIP",
+      "OSPF",
+      "ICMP"
+    ],
+    "answer": 0,
+    "explain": "BGP path vector protocol hai jo alag-alag AS/ISP ke beech chalta hai. RIP aur OSPF ek organization ke andar."
+  },
+  {
+    "q": "Traceroute discovers the path by:",
+    "options": [
+      "Broadcasting ARP requests",
+      "Sending SYN packets to each router",
+      "Querying the DNS root servers",
+      "Sending packets with increasing TTL and reading ICMP Time Exceeded replies"
+    ],
+    "answer": 3,
+    "explain": "Traceroute TTL 1,2,3... badhata hai; har router packet drop karke ICMP Time Exceeded bhejta hai, isse raasta dikhta hai."
+  },
+  {
+    "q": "Which protocol is connectionless and does NOT guarantee delivery or order?",
+    "options": [
+      "TCP",
+      "UDP",
+      "HTTP over TCP",
+      "FTP"
+    ],
+    "answer": 1,
+    "explain": "UDP connectionless hai, koi handshake/ACK nahi. TCP reliable aur connection-oriented hai."
+  },
+  {
+    "q": "In the TCP 3-way handshake, the server's reply to the client's SYN is:",
+    "options": [
+      "SYN+ACK",
+      "FIN",
+      "ACK only",
+      "RST"
+    ],
+    "answer": 0,
+    "explain": "Client SYN -> server SYN+ACK -> client ACK. Teen step mein dono ke sequence numbers set ho jaate hai."
+  },
+  {
+    "q": "Flow control in TCP uses which window?",
+    "options": [
+      "Congestion window (cwnd)",
+      "The TTL window",
+      "Sliding frame window at the data link layer",
+      "Receiver window (rwnd)"
+    ],
+    "answer": 3,
+    "explain": "Flow control receiver window (rwnd) se receiver ko overflow hone se bachaata hai. Congestion control cwnd use karta hai."
+  },
+  {
+    "q": "With m = 3 sequence-number bits, the maximum Go-Back-N sender window is:",
+    "options": [
+      "8",
+      "4",
+      "7",
+      "3"
+    ],
+    "answer": 2,
+    "explain": "Go-Back-N max window = 2^m - 1 = 2^3 - 1 = 7. Selective Repeat ka max = 2^(m-1) = 4."
+  },
+  {
+    "q": "A 1000-byte frame is sent on a 1 Mbps link. The transmission delay is:",
+    "options": [
+      "1 ms",
+      "8 ms",
+      "80 ms",
+      "0.8 ms"
+    ],
+    "answer": 1,
+    "explain": "Tt = frame bits / bandwidth = 8000 / 1,000,000 = 0.008 s = 8 ms. 1000 bytes = 8000 bits."
+  },
+  {
+    "q": "CRC: data 100100 with generator 1101 gives what 3-bit remainder (CRC)?",
+    "options": [
+      "101",
+      "111",
+      "001",
+      "011"
+    ],
+    "answer": 2,
+    "explain": "100100 ke aage 3 zero laga ke 1101 se mod-2 divide karo; remainder 001 aata hai, codeword 100100001."
+  },
+  {
+    "q": "DNS normally uses which transport protocol and port?",
+    "options": [
+      "TCP port 80",
+      "UDP port 53",
+      "TCP port 443",
+      "UDP port 67"
+    ],
+    "answer": 1,
+    "explain": "Normal DNS query UDP port 53 par hoti hai (chhoti, fast). TCP 53 zone transfer/badi response ke liye."
+  },
+  {
+    "q": "In symmetric encryption like AES:",
+    "options": [
+      "A public and private key pair is used",
+      "Only the format changes, with no secrecy",
+      "Data cannot be decrypted at all (one-way)",
+      "The same key is used to encrypt and decrypt"
+    ],
+    "answer": 3,
+    "explain": "Symmetric encryption mein dono taraf same key hoti hai (AES), fast par key share karna challenge. One-way to hashing hota hai."
+  }
+]

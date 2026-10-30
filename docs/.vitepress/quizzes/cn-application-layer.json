@@ -1,0 +1,32 @@
+[
+  {
+    "q": "HTTP status code 404 ka matlab kya hai?",
+    "options": ["Server ki internal galti", "Requested resource nahi mila", "Request successful", "Permanent redirect"],
+    "answer": 1,
+    "explain": "404 Not Found matlab client ne jo resource maanga wo server par hai hi nahi. Ye 4xx (client error) class mein aata hai."
+  },
+  {
+    "q": "DNS normal query ke liye kaun sa protocol aur port use hota hai?",
+    "options": ["TCP port 53", "UDP port 53", "TCP port 80", "UDP port 67"],
+    "answer": 1,
+    "explain": "Normal DNS queries UDP port 53 par hoti hain (fast aur chhoti). Zone transfer aur bade responses ke liye TCP 53 use hota hai."
+  },
+  {
+    "q": "DHCP ke DORA process mein steps kaun se hain?",
+    "options": ["Discover, Offer, Request, Acknowledge", "Detect, Open, Resolve, Accept", "Discover, Open, Request, Accept", "Deliver, Offer, Resolve, Acknowledge"],
+    "answer": 0,
+    "explain": "DORA = Discover (client broadcast), Offer (server IP offer), Request (client chuna hua IP maangta), Acknowledge (server confirm)."
+  },
+  {
+    "q": "HTTP status 401 aur 403 mein kya farak hai?",
+    "options": ["Dono same hain", "401 = login nahi hai; 403 = login hai par permission nahi", "401 = permission nahi; 403 = login nahi", "401 server error, 403 client error"],
+    "answer": 1,
+    "explain": "401 Unauthorized matlab authentication missing (aap login hi nahi ho). 403 Forbidden matlab login to hai par is resource ki permission nahi."
+  },
+  {
+    "q": "In mein se kaun sa HTTP method idempotent NAHI hai?",
+    "options": ["GET", "PUT", "DELETE", "POST"],
+    "answer": 3,
+    "explain": "POST idempotent nahi hai: baar-baar bhejne par naye records ban sakte hain. GET, PUT, DELETE idempotent hain, repeat karne par result nahi badalta."
+  }
+]

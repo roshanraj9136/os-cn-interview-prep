@@ -1,0 +1,32 @@
+[
+  {
+    "q": "Ek switch kaun si OSI layer par kaam karta hai?",
+    "options": ["Physical (L1)", "Data Link (L2)", "Network (L3)", "Transport (L4)"],
+    "answer": 1,
+    "explain": "Switch L2 Data Link device hai; ye MAC address dekh ke frame sahi port par bhejta hai."
+  },
+  {
+    "q": "Full mesh topology mein 6 nodes ke liye kitne links chahiye?",
+    "options": ["12", "30", "15", "6"],
+    "answer": 2,
+    "explain": "Formula n(n-1)/2 = 6 x 5 / 2 = 15 links."
+  },
+  {
+    "q": "Frame 1000 bytes, link 1 Mbps. Transmission delay kitna hai?",
+    "options": ["8 ms", "1 ms", "80 ms", "10 ms"],
+    "answer": 0,
+    "explain": "1000 bytes = 8000 bits; 8000 / 1,000,000 = 8 ms. Transmission delay = size / bandwidth."
+  },
+  {
+    "q": "Hub ke baare mein kaun sa sahi hai?",
+    "options": ["Har port alag collision domain", "MAC table maintain karta hai", "Poore network mein ek hi collision domain", "IP address dekh ke forward karta hai"],
+    "answer": 2,
+    "explain": "Hub L1 device hai; sab ports ek hi collision domain mein hote hain aur data sab ports par jaata hai."
+  },
+  {
+    "q": "Walkie-talkie kaun se transmission mode ka example hai?",
+    "options": ["Simplex", "Full-duplex", "Broadcast", "Half-duplex"],
+    "answer": 3,
+    "explain": "Walkie-talkie half-duplex hai: dono taraf baat ho sakti hai par ek samay sirf ek aadmi."
+  }
+]

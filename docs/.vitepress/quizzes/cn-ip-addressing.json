@@ -1,0 +1,32 @@
+[
+  {
+    "q": "192.168.10.75/27 ka network address kya hai?",
+    "options": ["192.168.10.0", "192.168.10.64", "192.168.10.75", "192.168.10.96"],
+    "answer": 1,
+    "explain": "/27 ka block size 256-224 = 32 hai, blocks 0/32/64/96. 75 block 64-95 mein girta hai, to network address 192.168.10.64 hai."
+  },
+  {
+    "q": "/27 subnet mein kitne usable hosts hote hain?",
+    "options": ["32", "30", "62", "16"],
+    "answer": 1,
+    "explain": "/27 mein 5 host bits hain, usable hosts = 2^5 - 2 = 30 (network aur broadcast address chhodke)."
+  },
+  {
+    "q": "In mein se kaun sa IP private (RFC 1918) nahi hai?",
+    "options": ["10.5.6.7", "192.168.0.10", "172.20.5.5", "172.32.0.1"],
+    "answer": 3,
+    "explain": "Private 172 range sirf 172.16.0.0 se 172.31.255.255 tak hai, isliye 172.32.0.1 public hai."
+  },
+  {
+    "q": "Agar ek subnet mein kam se kam 50 hosts chahiye, to sabse chhota sahi prefix kaun sa hai?",
+    "options": ["/25", "/26", "/27", "/28"],
+    "answer": 1,
+    "explain": "/26 mein 2^6 - 2 = 62 usable hosts hain, jo 50 ke liye kaafi aur sabse chhota (tight) fit hai."
+  },
+  {
+    "q": "IPv6 address 2001:0db8:0000:0000:0000:ff00:0042:8329 ka sabse chhota (compressed) form kya hai?",
+    "options": ["2001:db8::ff00:42:8329", "2001:db8:0:0:0:ff00:42:8329", "2001:db8::ff00::8329", "21:db8::ff00:42:8329"],
+    "answer": 0,
+    "explain": "Leading zeros hatao aur all-zero groups ke run ko ek baar :: se replace karo: 2001:db8::ff00:42:8329."
+  }
+]

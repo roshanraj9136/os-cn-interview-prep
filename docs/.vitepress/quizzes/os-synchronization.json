@@ -1,0 +1,32 @@
+[
+  {
+    "q": "Race condition ka sabse accha description kaunsa hai?",
+    "options": ["Jab CPU idle rehta hai", "Jab final result threads ke interleaving order par depend karta hai", "Jab ek process doosre ko kill karta hai", "Jab RAM bhar jaata hai"],
+    "answer": 1,
+    "explain": "Race condition mein shared data ka final result is baat par depend karta hai ki threads kis order mein chale, jaise counter++ mein update kho jaana."
+  },
+  {
+    "q": "Mutex aur semaphore ke beech sabse bada fark kya hai?",
+    "options": ["Mutex sirf kernel mein chalta hai", "Semaphore hamesha 0 ya 1 hota hai", "Mutex ka ownership hota hai, semaphore ka nahi", "Semaphore faster hota hai"],
+    "answer": 2,
+    "explain": "Mutex ka ownership hota hai: jisne lock kiya wahi unlock kare. Semaphore ek counter hai bina ownership ke, koi bhi wait/signal kar sakta hai."
+  },
+  {
+    "q": "Critical section ke sahi solution ke teen requirements kaun se hain?",
+    "options": ["Mutual exclusion, progress, bounded waiting", "Mutual exclusion, deadlock, starvation", "Atomicity, consistency, durability", "Fairness, speed, simplicity"],
+    "answer": 0,
+    "explain": "Har sahi critical-section solution ko mutual exclusion, progress aur bounded waiting teeno satisfy karne chahiye."
+  },
+  {
+    "q": "Bounded-buffer producer-consumer mein semaphores ki initial values kya hoti hain?",
+    "options": ["empty = 0, full = N, mutex = 1", "empty = N, full = 0, mutex = 1", "empty = 1, full = 1, mutex = N", "empty = N, full = N, mutex = 0"],
+    "answer": 1,
+    "explain": "Shuru mein saare N slots khaali hote hain (empty = N), koi bhara nahi (full = 0), aur mutex = 1 buffer ki mutual exclusion ke liye."
+  },
+  {
+    "q": "Dining philosophers problem mein deadlock kab hota hai?",
+    "options": ["Jab har philosopher pehle apna left chopstick uthaye", "Jab koi philosopher khaaye hi na", "Jab 4 se kam philosopher hon", "Jab chopsticks shareable hon"],
+    "answer": 0,
+    "explain": "Agar sab ek saath pehle left chopstick uthaa lein to har kisi ke paas ek hai aur sab doosre ka wait karte hain (circular wait) -> deadlock."
+  }
+]

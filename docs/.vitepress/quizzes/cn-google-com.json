@@ -1,0 +1,32 @@
+[
+  {
+    "q": "google.com type karne ke baad sabse pehle kaun sa network step hota hai (URL parse ke baad)?",
+    "options": ["DNS lookup (naam se IP)", "TCP 3-way handshake", "TLS handshake", "HTTP GET bhejna"],
+    "answer": 0,
+    "explain": "IP ke bina connection ban hi nahi sakta, isliye pehle DNS se google.com ka IP nikala jaata hai (cache -> resolver -> root -> TLD -> authoritative)."
+  },
+  {
+    "q": "Google door hai (LAN ke bahar). To host ARP se kiska MAC address dhoondhta hai?",
+    "options": ["Google ke server ka MAC", "Apne default gateway (router) ka MAC", "DNS resolver ka MAC", "Kisi ka nahi, ARP ki zaroorat nahi"],
+    "answer": 1,
+    "explain": "Destination LAN ke bahar ho to host apne default gateway ka MAC ARP karta hai, Google ka nahi, kyunki pehla frame router ko jaana hai."
+  },
+  {
+    "q": "Packet jab ek router se dusre router jaata hai, to kya same rehta hai?",
+    "options": ["Source aur destination MAC address", "TTL value", "Source aur destination IP address (NAT chhod ke)", "Kuch bhi nahi"],
+    "answer": 2,
+    "explain": "Har hop par MAC address badalta hai aur TTL 1 kam hota hai, par source/destination IP end-to-end same rehta hai (jab tak NAT use na ho)."
+  },
+  {
+    "q": "HTTPS connection mein TLS handshake kis step ke baad hota hai?",
+    "options": ["DNS lookup se pehle", "HTTP response aane ke baad", "Browser rendering ke baad", "TCP 3-way handshake ke baad"],
+    "answer": 3,
+    "explain": "TLS TCP ke upar chalta hai, isliye pehle TCP 3-way handshake connection banata hai, phir TLS handshake use encrypt karta hai."
+  },
+  {
+    "q": "Dusri baar google.com khulne par page zyada tez kyun load hota hai?",
+    "options": ["Internet speed apne aap badh jaati hai", "DNS answer, connection reuse aur cached CSS/JS/images ki wajah se", "Google har baar naya server deta hai", "Browser HTTP ki jagah FTP use karta hai"],
+    "answer": 1,
+    "explain": "DNS jawab TTL tak cache rehta hai, TCP/TLS connection reuse ho jaata hai, aur CSS/JS/images browser cache se aa jaate hain, isliye dobara handshake aur download nahi karna padta."
+  }
+]

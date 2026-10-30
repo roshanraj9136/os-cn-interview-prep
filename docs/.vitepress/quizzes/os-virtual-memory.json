@@ -1,0 +1,32 @@
+[
+  {
+    "q": "Reference string 7 0 1 2 0 3 0 4 2 3 0 3 2 with 3 frames par FIFO se kitne page faults?",
+    "options": ["7", "9", "10", "13"],
+    "answer": 2,
+    "explain": "FIFO par is string mein 10 page faults aur 3 hits aate hain (hit ratio 3/13)."
+  },
+  {
+    "q": "Usi 13-reference string aur 3 frames par kis algorithm mein sabse kam page faults aate hain?",
+    "options": ["FIFO", "LRU", "Optimal", "Sabme barabar"],
+    "answer": 2,
+    "explain": "Optimal = 7, LRU = 9, FIFO = 10. Optimal hamesha minimum deta hai par future knowledge maangta hai."
+  },
+  {
+    "q": "Belady's anomaly kis algorithm mein hoti hai?",
+    "options": ["LRU", "Optimal", "FIFO", "LFU"],
+    "answer": 2,
+    "explain": "FIFO mein kabhi zyada frames se zyada page faults ho jaate hain; LRU aur Optimal stack algorithms hain, inme nahi hoti."
+  },
+  {
+    "q": "Memory access 200 ns, page-fault service 8 ms, fault rate 0.001. EAT lagbhag kitna?",
+    "options": ["200 ns", "8199.8 ns", "8,000,000 ns", "2000 ns"],
+    "answer": 1,
+    "explain": "EAT = 0.999*200 + 0.001*8,000,000 = 199.8 + 8000 = 8199.8 ns, yaani ~41x slow."
+  },
+  {
+    "q": "Thrashing ka sabse sahi matlab kya hai?",
+    "options": ["CPU bahut fast chal raha hai", "System real work se zyada time pages swap karne mein lagata hai", "Page table bahut bada ho gaya", "Disk full ho gayi"],
+    "answer": 1,
+    "explain": "Thrashing mein itne page faults hote hain ki CPU execution se zyada swapping karta hai; CPU utilisation gir jaata hai."
+  }
+]
