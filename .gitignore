@@ -6,3 +6,6 @@ docs/.vitepress/.temp/
 *.log
 .DS_Store
 Thumbs.db
+
+.vercel
+.env*
