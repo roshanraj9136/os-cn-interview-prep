@@ -4,7 +4,7 @@
 
 Operating System aur Computer Networks ki interview preparation, simple Hinglish mein, 12-15 LPA wali placements ke liye.
 
-- 24 topic pages (OS + CN), har page par simple explanation, diagrams, comparison tables, "Interview mein aise bolo" English answers, follow-up questions aur ek quiz
+- 18 topic pages (9 OS + 9 CN), har page par simple explanation, diagrams, comparison tables, "Interview mein aise bolo" English answers, follow-up questions aur ek quiz
 - OS aur CN dono ke Top 60 interview questions
 - 140 MCQs (har topic par 5, aur dono subjects ka 25-question mock test)
 - 7 din ka study plan (progress browser mein save hota hai)
