@@ -1,5 +1,7 @@
 # OS + CN Interview Prep (Hinglish)
 
+**Live site: https://os-cn-interview-prep.vercel.app**
+
 Operating System aur Computer Networks ki interview preparation, simple Hinglish mein, 12-15 LPA wali placements ke liye.
 
 - 24 topic pages (OS + CN), har page par simple explanation, diagrams, comparison tables, "Interview mein aise bolo" English answers, follow-up questions aur ek quiz
